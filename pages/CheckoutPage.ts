@@ -14,14 +14,14 @@ export class CheckoutPage {
   }
 
   async fillInformation(firstName: string, lastName: string, postalCode: string) {
-    await this.page.fill(this.firstNameInput, firstName);
-    await this.page.fill(this.lastNameInput, lastName);
-    await this.page.fill(this.postalCodeInput, postalCode);
-    await this.page.click(this.continueButton);
+    await this.page.locator(this.firstNameInput).fill(firstName);
+    await this.page.locator(this.lastNameInput).fill(lastName);
+    await this.page.locator(this.postalCodeInput).fill(postalCode);
+    await this.page.locator(this.continueButton).click();
   }
 
   async finishCheckout() {
-    await this.page.click(this.totalLabel);
-    await this.page.click(this.finishButton);
+    await this.page.locator(this.totalLabel).click();
+    await this.page.locator(this.finishButton).click();
   }
 }

@@ -9,6 +9,6 @@ export class CartPage {
   }
 
   async checkout() {
-    await this.page.click(this.checkoutButton);
+    await this.page.locator(this.checkoutButton).click();
   }
 }

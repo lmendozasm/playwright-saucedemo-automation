@@ -12,18 +12,18 @@ export class InventoryPage {
   }
 
   async addBackpack() {
-    await this.page.click(this.backpackAddBtn);
+    await this.page.locator(this.backpackAddBtn).click();
   }
 
   async addTShirt() {
-    await this.page.click(this.tshirtAddBtn);
+    await this.page.locator(this.tshirtAddBtn).click();
   }
 
   async addBikeLight() {
-    await this.page.click(this.bikeLightAddBtn);
+    await this.page.locator(this.bikeLightAddBtn).click();
   }
 
   async goToCart() {
-    await this.page.click(this.cartLink);
+    await this.page.locator(this.cartLink).click();
   }
 }

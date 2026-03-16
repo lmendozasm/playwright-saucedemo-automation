@@ -18,7 +18,15 @@
    ```sh
    npm test
    ```
-3. View HTML report:
+3. Generate storage state (optional but speeds up tests):
+   ```sh
+   npm run auth:state
+   ```
+4. Run tests:
+   ```sh
+   npm test
+   ```
+5. View HTML report:
    ```sh
    npm run test:report
    ```
