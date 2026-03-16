@@ -1,4 +1,5 @@
-import { test, expect } from '../testFixtures';
+import { test, expect } from '../../fixtures/testFixtures';
+import { getUser } from '../../utils/users';
 import { InventoryPage } from '../../pages/InventoryPage';
 import { CartPage } from '../../pages/CartPage';
 import { CheckoutPage } from '../../pages/CheckoutPage';
@@ -8,7 +9,8 @@ test('user can complete a purchase', async ({ loginPage, page }) => {
   const cartPage = new CartPage(page);
   const checkoutPage = new CheckoutPage(page);
 
-  await loginPage.login('standard_user', 'secret_sauce');
+  const standardUser = getUser('standard_user');
+  await loginPage.login(standardUser.username, standardUser.password);
   await inventoryPage.addBackpack();
   await inventoryPage.addTShirt();
   await inventoryPage.addBikeLight();

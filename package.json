@@ -7,7 +7,7 @@
     "test": "npx playwright test",
     "test:ci": "npx playwright test --reporter=html --output=playwright-report",
     "test:report": "npx playwright show-report playwright-report",
-    "auth:state": "node ./tests/createStorageState.ts",
+    "auth:state": "node ./tests/createStorageState.js",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write ."
   },
