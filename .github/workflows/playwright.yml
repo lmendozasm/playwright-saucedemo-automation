@@ -4,6 +4,9 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  schedule:
+    - cron: '40 21 * * *' # Runs every day at 21:40 UTC (adjust as needed)
+  workflow_dispatch:      # Also allows you to click a "Run" button manually
 jobs:
   test:
     timeout-minutes: 60
